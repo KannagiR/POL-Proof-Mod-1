@@ -10,7 +10,7 @@ async function main() {
 
   // The URL of the network provider
   const networkAddress =
-    "https://eth-goerli.g.alchemy.com/v2/h-asDNMJ21mVniDAY3XE1VQ9F7PW7A0x";
+    "https://eth-goerli.g.alchemy.com/v2/daljpGy0g0KvSpFDwXMZbtOEpmexryq3";
 
   // Create a provider using the URL
   const provider = new ethers.providers.JsonRpcProvider(networkAddress);
