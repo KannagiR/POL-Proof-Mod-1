@@ -1,4 +1,4 @@
-//import c from "contracts/examples/erc721-transfer/FxERC721RootTunnel.sol"// Import necessary packages and contracts
+//import from "contracts/examples/erc721-transfer/FxERC721RootTunnel.sol"// Import necessary packages and contracts
 const { ethers } = require("hardhat");
 const  { FXRootContractAbi }  = require("../artifacts/FXRootContractAbi.js");
 const ABI = require("../artifacts/contracts/americanfood.sol/americanfood.json");
