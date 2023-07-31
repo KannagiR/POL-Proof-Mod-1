@@ -1,4 +1,5 @@
-//import from "contracts/examples/erc721-transfer/FxERC721RootTunnel.sol"// Import necessary packages and contracts
+//import from "contracts/examples/erc721-transfer/FxERC721RootTunnel.sol"
+// Import necessary packages and contracts
 const { ethers } = require("hardhat");
 const  { FXRootContractAbi }  = require("../artifacts/FXRootContractAbi.js");
 const ABI = require("../artifacts/contracts/americanfood.sol/americanfood.json");
@@ -7,8 +8,7 @@ require("dotenv").config();
 //Transfer ERC721A tokens to the Ethereum FxChain network
 async function main() {
   // Set up connections to network and wallet
-  const networkAddress =
-    "https://eth-goerli.g.alchemy.com/v2/daljpGy0g0KvSpFDwXMZbtOEpmexryq3";
+  const networkAddress = "https://eth-goerli.g.alchemy.com/v2/daljpGy0g0KvSpFDwXMZbtOEpmexryq3";
   const privateKey = process.env.PRIVATE_KEY;
   const provider = new ethers.providers.JsonRpcProvider(networkAddress);
 
@@ -46,15 +46,14 @@ async function main() {
     await depositTx.wait();
   }
 
-  console.log("Action completed- Approved and deposited");
+  console.log(" Successfully Approved and deposited");
 
   // Test balanceOf
   const balance = await nft.balanceOf(wallet.address);
 
   // Print the balance of the wallet
-  console.log("IndianNFT wallet balance", wallet.address, "is: ", balance.toString());
+  console.log("NFT balance", wallet.address, "is-- ", balance.toString());
 }
-
 
 // Call the main function and handle any errors
 main()
