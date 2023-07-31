@@ -12,7 +12,7 @@ async function main() {
   await nft.deployed();
 
   // Log the contract address
-  console.log("NFT contract deployed to:", nft.address);
+  console.log("NFT contract deployed to address:", nft.address);
 
   // export the addresses
   fs.writeFileSync(
