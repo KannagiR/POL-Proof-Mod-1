@@ -23,13 +23,12 @@ contract americanfood is ERC721A {
 
     // Modifier that only allows the owner to execute a function
     modifier onlyOwner() {
-        require(msg.sender == owner, "Only owner can use this function");
+        require(msg.sender == owner, "This function is only accessible by the owner");
         _;
     }
 
     // Function to mint NFT 
     function mint(uint256 quantity) external payable onlyOwner {
-        
         _mint(msg.sender, quantity);
     }
 
