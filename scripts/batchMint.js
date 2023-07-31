@@ -29,7 +29,7 @@ async function main() {
   await contract.mint(5);
 
   // Log a message to the console to indicate that the tokens have been minted
-  console.log("Minted 5 tokens");
+  console.log("Successfully Minted 5 tokens");
 }
 
 main()
