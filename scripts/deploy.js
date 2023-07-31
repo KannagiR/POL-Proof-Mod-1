@@ -14,13 +14,11 @@ async function main() {
   // Log the contract address
   console.log("NFT contract deployed to address:", nft.address);
 
-  // export the addresses
-  fs.writeFileSync(
-    "metadata/contractAddress.js",
-    `
-    export const nftAddress = "${nft.address}"
-  `
-  );
+  // Export the addresses
+  const addresses = {
+    nftAddress: nft.address,
+  };
+  fs.writeFileSync("metadata/contractAddress.js", JSON.stringify(addresses));
 }
 
 // Execute the deployment function
